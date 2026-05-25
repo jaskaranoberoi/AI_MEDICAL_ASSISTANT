@@ -63,21 +63,21 @@ The platform must include:
 
 ## **1\. Agentic AI Orchestration Layer**
 
-The orchestration layer should be implemented as an entity that is tasked with the following:
+The orchestration layer needs to be realized through an entity responsible for performing the following operations:
 
 * agent routing,  
-* execution sequence,  
+* sequence of execution,  
 * memory management,  
-* context management,   
-* response composition.
+* context management,  
+* composing responses.
 
-The orchestrator should make the decision regarding which agents to run depending on:
+The orchestrator makes decisions about running certain agents based on:
 
-* report uploads,  
-* images of illnesses,  
-* user-reported symptoms,  
-* patient intake, and  
-* user questions.
+* uploading reports,
+* pictures of diseases,
+* user symptom description,
+* user intake, and
+* questions from users.
 
 The orchestrator should facilitate:
 
