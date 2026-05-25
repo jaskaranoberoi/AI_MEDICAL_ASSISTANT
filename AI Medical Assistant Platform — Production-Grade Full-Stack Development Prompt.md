@@ -103,37 +103,37 @@ Duties:
 * Uncertainty maintenance.
 
 
-Key Features:
+Important aspects:
 
-* Parsing in a structured format  
-* Symptom extraction  
-* Risk factor tagging  
-* Context enhancement
+* Structured parsing  
+* Extracting symptoms  
+* Identifying risk factors  
+* Adding context
 
-## **Vision Agent**
+### **Vision Agent**
 
-Duties:
+Functions:
 
-* Examination of uploaded medical images.  
-* Making non-diagnostic visual observations.  
-* Image quality analysis.  
-* Provision of uncertainty-aware outputs.
+* Inspection of uploaded medical images.  
+* Giving non-diagnostic visual insights.  
+* Quality assessment of images.  
+* Producing uncertainty-based responses.
 
 
-Accepted formats:
+Formats supported:
 
 * X-rays  
 * MRIs  
-* Computed tomography (CT)  
+* CT scan  
 * Ultrasounds  
-* Laboratory test results (screenshots)
+* Lab test results (screenshots)
 
 
-Requirements:
+Specifications:
 
-* Implementation based on multimodal local models via Ollama.  
-* No definitive diagnoses allowed.  
-* Confidence warnings included.
+* Multimodal local model implementation through Ollama.  
+* No diagnoses permitted.  
+* Includes confidence levels.
 
 
 Vision processing has to provide:
