@@ -125,3 +125,149 @@ medical-ai-platform/
 ├── requirements.txt
 ├── docker-compose.yml
 └── README.md
+
+
+Technology Stack
+Layer	Technology
+Backend API	FastAPI
+Frontend	Streamlit
+LLM Runtime	Ollama
+Vision Model	LLaVA
+Text Model	Llama3
+Embeddings	all-MiniLM-L6-v2
+Vector Database	ChromaDB
+PDF Parsing	PyMuPDF
+Validation	Pydantic
+Deployment	Docker
+Safety Architecture
+
+The platform includes multiple healthcare safety layers.
+
+Safety Features
+Rule-based filtering
+Unsafe output blocking
+Confidence disclaimers
+No diagnosis enforcement
+No prescription enforcement
+Emergency symptom detection
+Grounding verification
+Educational-only guidance
+RAG Pipeline
+
+The Retrieval-Augmented Generation pipeline supports:
+
+PDF ingestion
+Semantic chunking
+Embeddings generation
+Vector retrieval
+Grounded AI responses
+Supported File Types
+PDF
+PNG
+JPG
+JPEG
+Vision AI
+
+Medical images are analyzed using:
+
+Ollama
+LLaVA multimodal model
+
+The system:
+
+Describes observations
+Mentions uncertainty
+Refuses diagnosis
+Avoids medical claims
+Session Memory
+
+The memory layer stores:
+
+Conversation history
+Uploaded files
+Agent outputs
+Workflow state
+Current Storage
+In-memory session storage
+Recommended Production Upgrades
+Redis
+PostgreSQL
+Encrypted persistence
+Installation
+1. Clone Repository
+git clone <repo-url>
+cd medical-ai-platform
+Install Dependencies
+pip install -r requirements.txt
+Install Ollama
+
+Download Ollama from:
+
+https://ollama.com
+
+Verify installation:
+
+ollama serve
+Pull Required Models
+ollama pull llama3
+ollama pull llava
+ollama pull nomic-embed-text
+Run Backend
+cd backend
+python app.py
+
+Backend URL:
+
+http://localhost:8000
+Run Frontend
+streamlit run frontend/ui.py
+
+Frontend URL:
+
+http://localhost:8501
+Docker Deployment
+Start Containers
+docker-compose up --build
+API Endpoints
+Endpoint	Method	Purpose
+/health	GET	Health check
+/session	POST	Create session
+/upload	POST	Upload files
+/analyze	POST	Run AI analysis
+Example Analyze Request
+{
+  "session_id": "demo-session",
+  "query": "Patient has headache and fatigue"
+}
+Future Production Upgrades
+Infrastructure
+Redis caching
+PostgreSQL persistence
+Celery workers
+Kubernetes deployment
+GPU inference scaling
+WebSocket streaming
+AI Enhancements
+Medical fine-tuned models
+Structured JSON outputs
+Citation generation
+Confidence scoring
+Hallucination verification
+Multi-agent memory graphs
+Security
+JWT authentication
+OAuth2
+HTTPS reverse proxy
+Audit logging
+PHI redaction
+Encryption-at-rest
+Privacy Design
+
+This platform is privacy-focused.
+
+Key Principles
+Local inference
+No cloud AI APIs
+Minimal data retention
+Session isolation
+Secure uploads
