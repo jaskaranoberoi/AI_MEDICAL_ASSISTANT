@@ -44,13 +44,13 @@ Build a complete AI Medical Assistant Platform capable of:
 
 The system must include:
 
-1\. AI Medical Dashboard  
-2\. Flask Backend APIs  
-3\. AI Agent System  
-4\. Local LLM Integration  
-5\. RAG Pipeline  
-6\. Patient Session Memory  
-7\. Safety Validation Layer
+AI Medical Dashboard — Central interface for accessing all AI healthcare features.
+Flask Backend APIs — Handles frontend communication, AI processing, and data flow.
+AI Agent System — Manages specialized AI agents for different medical tasks.
+Local LLM Integration — Runs AI models locally for privacy and offline capability.
+RAG Pipeline — Retrieves relevant medical data before generating responses.
+Patient Session Memory — Maintains conversation and patient context across sessions.
+Safety Validation Layer — Verifies AI outputs for safer medical assistance.
 
 **TECH STACK**  
 FRONTEND:  
