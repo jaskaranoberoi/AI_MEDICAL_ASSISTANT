@@ -63,22 +63,17 @@ BACKEND:
 \- Python  
 \- Flask
 
-AI/ML:  
-\- Ollama  
-\- Sentence Transformers  
-\- Local LLMs  
-\- RAG Pipeline
+\-Ollama -- effectively runs local LLMs on the system.
+\- Sentence Transformers – Transform text into embeddings for semantic search.
+\-Local LLMs — Enables private, offline AI inference, no cloud needed.
+\-RAG Pipeline — Leverages document retrieval for more accurate responses.
 
 VECTOR DATABASE:  
-\- ChromaDB
+\- ChromaDB - Stores and searches embeddings for quick document retrieval.
 
 DOCUMENT PROCESSING:  
-\- PyMuPDF
+\- PyMuPDF  – Extracts text and content from PDFs fast.
 
-OPTIONAL FUTURE SUPPORT:  
-\- React  
-\- Next.js  
-\- Framer Motion
 
 **PROJECT STRUCTURE**  
 project-root/  
@@ -95,13 +90,13 @@ project-root/
 **CORE SYSTEM REQUIREMENTS**  
 The platform must contain:
 
-1\. AI Agent Orchestration  
-2\. Medical Report Analysis  
-3\. Medical Image Analysis  
-4\. Conversational AI  
-5\. Safety Validation  
-6\. Patient Memory System  
-7\. Modern Dashboard UI
+1\. AI Agent Orchestration — Orchestrates multiple AI agents to solve complex healthcare workflows.
+2\. Medical Report Analysis — Analyzes and explains insights from uploaded medical reports.
+3\. Medical Image Analysis — Analyzes medical images for diagnostic interpretation.
+4\. Conversational AI — Lets patients converse with the AI assistant in their own words.
+5\. Safety Validation — Tests AI responses for medical safety and reliability.
+6\. Patient Memory System — Maintains conversation and history context for the patient to provide personalised assistance.
+7\. Modern Dashboard UI – A user-friendly interface to manage healthcare interactions and data.
 
 The architecture should be:  
 \- Modular  
@@ -115,17 +110,17 @@ Implement modular AI agents.
 
 1\. INTAKE AGENT
 
-Responsibilities:  
-\- Process patient symptoms  
-\- Handle medical history  
-\- Extract medical entities  
-\- Normalize patient information
+Duties:  
+\- Take Medical History
+\- Manage patient symptoms
+\- Extract medical entities
+\- Patient data standardization
 
 Features:  
-\- Structured parsing  
-\- Symptom extraction  
-\- Risk factor tagging  
-\- Context enhancement
+\- Structured parsing 
+\- Symptom extraction 
+\- Risk factor annotation
+\- More context
 
 **2\. VISION AGENT**  
 Responsibilities:  
