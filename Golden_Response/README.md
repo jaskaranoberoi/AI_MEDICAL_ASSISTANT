@@ -3,43 +3,104 @@ AI Medical Assistant (GenAI + Agentic AI)
 A privacy-preserving, multimodal AI medical assistant built using GenAI and Agentic AI principles.
 The system processes patient intake data, medical images, and clinical reports to provide safe, non-diagnostic medical guidance with strict hallucination prevention and compliance controls.
 
- Disclaimer:
-This system is not a diagnostic or treatment tool. It does not provide medical diagnoses or prescriptions and is intended only for educational and clinical decision-support purposes.
+ Overview
+This is a production-grade AI Medical Copilot architecture built with:
+FastAPI backend
+Streamlit frontend
+Ollama local inference
+ChromaDB vector retrieval
+Async orchestration
+Enterprise safety enforcement
+Typed schemas (Pydantic)
+Structured RAG pipeline
+Modular AI agents
+Session memory layer
+Medical-safe prompting
 
- Key Features
+Recommended Final Project Structure
+medical-ai-platform/
+│
+├── backend/
+│   ├── app.py
+│   ├── orchestrator.py
+│   ├── dependencies.py
+│   ├── middleware/
+│   │   ├── logging_middleware.py
+│   │   └── error_handler.py
+│   │
+│   ├── routes/
+│   │   ├── health.py
+│   │   ├── sessions.py
+│   │   ├── upload.py
+│   │   └── analyze.py
+│   │
+│   ├── schemas/
+│   │   ├── requests.py
+│   │   ├── responses.py
+│   │   └── medical.py
+│   │
+│   └── services/
+│       ├── ollama_client.py
+│       ├── vector_store.py
+│       ├── embedding_service.py
+│       ├── audit_logger.py
+│       └── emergency_detector.py
+│
+├── agents/
+│   ├── planner_agent.py
+│   ├── intake_agent.py
+│   ├── vision_agent.py
+│   ├── rag_agent.py
+│   ├── guidance_agent.py
+│   ├── grounding_agent.py
+│   └── safety_agent.py
+│
+├── memory/
+│   └── session_memory.py
+│
+├── prompts/
+│   └── prompts.py
+│
+├── frontend/
+│   └── app.py
+│
+├── uploads/
+├── chroma_db/
+├── requirements.txt
+├── docker-compose.yml
+└── README.md
 
- Agentic AI Architecture
-Modular agents for patient intake, imaging analysis, report understanding (RAG), safety validation, and guidance generation.
+requirements.txt
+fastapi
+uvicorn
+streamlit
+requests
+chromadb
+sentence-transformers
+pymupdf
+python-multipart
+pydantic
+pillow
+ollama
 
- Multimodal AI (Text + Vision)
-Processes medical images (e.g., MRI/X-ray) to generate non-diagnostic observations with uncertainty awareness.
 
- RAG-Based Medical Report Analysis
-Analyzes uploaded medical PDFs using embeddings and vector search to ensure source-grounded, hallucination-free responses.
 
- Safety & Compliance First
-Explicit safeguards prevent diagnoses, prescriptions, and overconfident claims, with automatic disclaimers and escalation guidance.
+Running The Project
+1. Install Ollama
+Install Ollama:
+https://ollama.com/download
 
- Context Memory Across Sessions
-Maintains structured patient context across multi-turn interactions for coherent medical guidance.
+2. Pull Models
+ollama pull llama3
+ollama pull llava
+ollama pull nomic-embed-text
 
- Fully Local & Privacy-Preserving
-Runs entirely on-device using Ollama-hosted LLMs with no external APIs or data sharing.
+3. Install Requirements
+pip install -r requirements.txt
 
-Tech Stack
+4. Start Backend
+python app.py
 
-Language: Python
+5. Start Frontend
+streamlit run frontend/ui.py
 
-LLMs: Ollama (local models)
-
-Vision Models: Local multimodal vision-capable models
-
-Backend: Flask
-
-Frontend: Streamlit
-
-RAG Pipeline: Embeddings + Vector Database
-
-Document Parsing: PDF text extraction
-
-Architecture: Agent-based orchestration
