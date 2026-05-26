@@ -1,0 +1,10 @@
+flask
+streamlit
+requests
+pillow
+pymupdf
+chromadb
+sentence-transformers
+numpy
+pandas
+python-dotenv
