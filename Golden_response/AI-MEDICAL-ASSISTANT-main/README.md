@@ -1,3 +1,7 @@
+<img width="958" height="446" alt="image" src="https://github.com/user-attachments/assets/ab93a537-7d2c-46e6-a5b0-46f5166f90b7" />
+
+
+
 AI Medical Assistant (GenAI + Agentic AI)
 
 A privacy-preserving, multimodal AI medical assistant built using GenAI and Agentic AI principles.
